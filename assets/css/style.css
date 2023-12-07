@@ -1,0 +1,14 @@
+*{
+    /*  kích thước của phần tử sẽ bao gồm width và height cộng thêm padding và border */
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+
+    /* Khôi phục lại kiểu chữ theo rem */
+    font-size: 1.6rem;
+}
