@@ -11,4 +11,97 @@ body{
 
     /* Khôi phục lại kiểu chữ theo rem */
     font-size: 1.6rem;
+    font-family: 'Playfair Display', serif;
+}
+/* ==================Common: Những thuộc tình chung áp dụng cho toàn trang================ */
+.main-content{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    color: #FFF;
+text-align: center;
+
+font-size: 1.6rem;
+
+font-weight: 600;
+/* line-height: 28px; 175% */
+
+/* Phần nền */
+border-radius: 24.5px;
+background: #171100;
+padding: 7px 20px ;
+}
+
+
+
+
+
+
+/* ================Header=============== */
+
+.header.fixed{
+    position: sticky;
+    top: -5px;
+}
+
+.header{
+    background-color: cyan;
+}
+.header .body{
+    display: flex;
+    align-items: center;
+}
+.nav{
+    margin-left: auto;
+}
+
+.nav ul{
+    display: flex;
+}
+
+.nav a{
+    position: relative;
+    color: #5F5B53;
+    font-size: 1.6rem;
+    padding: 8px 22px;
+ /* margin: 10px; */
+ /* background: yellow; */
+}
+.nav a:hover, nav li.active a{
+    color: #171100;
+    
+    /* font-weight: 600; */
+    text-shadow: 1px 0  0 currentColor;
+    /* line-height: 28px; 175% */
+
+}
+nav li.active a::after{
+   position: absolute;
+   left: 22px;
+   bottom: 6px;
+   display: block;
+   content: "";
+   width: 12px;
+   height: 2px;
+   border-radius: 1px;
+   background-color: #171100;
+   
+}
+
+.fixed{
+    
+}
+
+
+.header .action{
+    margin-left: 90px;
 }

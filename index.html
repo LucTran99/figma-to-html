@@ -4,11 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Reset css  -->
+
+
     <link rel="stylesheet" href="./assets/css/reset.css" />
+<!-- Nhung Phong -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Figma to HTML</title>
   </head>
-  <body>
-    <h1>Figma to HTML</h1>
+  <body style="height: 10000px;">
+      <!-- Code cho phần Header: Thẻ Header là thẻ có ngữ nghĩa -->
+      <header class="header fixed">
+        <div class="main-content">
+          <div class="body">
+            <!-- Logo -->
+            <img src="./assets/img/pngtree-cute-robot-mascot-logo-png-image_8493119.png" alt="robot" class="logo">
+
+            <!-- Thẻ Nav: là thẻ có ngữ nghĩa. Giúp cho web biết đó là thanh menu -->
+            <nav class="nav">
+              <ul >
+                <li class="active"><a href="#!">Home</a></li>
+                <li><a href="#!">Course</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Previews</a></li>
+              </ul>
+            </nav>
+            <!-- Button Action -->
+            <div class="action"><a href="#!" class="btn btn-sign-up">Sign Up</a></div>
+          </div>
+        </div>
+      </header>
   </body>
 </html>
