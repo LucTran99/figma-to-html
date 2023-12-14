@@ -1,107 +1,759 @@
-*{
-    /*  kích thước của phần tử sẽ bao gồm width và height cộng thêm padding và border */
-    box-sizing: border-box;
+* {
+  /*  kích thước của phần tử sẽ bao gồm width và height cộng thêm padding và border */
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+:root {
+  --font-heading: "Sen", "sans-serif";
+  --primary-color: #ffb900;
 }
 
-body{
-
-    /* Khôi phục lại kiểu chữ theo rem */
-    font-size: 1.6rem;
-    font-family: 'Playfair Display', serif;
-}
-/* ==================Common: Những thuộc tình chung áp dụng cho toàn trang================ */
-.main-content{
-    width: 1170px;
-    max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
-
+html {
+  font-size: 62.5%;
 }
 
-a{
-    text-decoration: none;
+body {
+  /* Khôi phục lại kiểu chữ theo rem */
+  font-size: 1.6rem;
+  font-family: "Playfair Display", serif;
+}
+/* =======================Common: Những thuộc tình chung áp dụng cho toàn trang================ */
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn{
-    color: #FFF;
-text-align: center;
+.heading-lever2 {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
 
-font-size: 1.6rem;
-
-font-weight: 600;
-/* line-height: 28px; 175% */
-
-/* Phần nền */
-border-radius: 24.5px;
-background: #171100;
-padding: 7px 20px ;
+  font-weight: 700;
+  line-height: 1.27; /* 126.316% */
+  letter-spacing: -0.76px;
 }
 
+a {
+  text-decoration: none;
+}
 
+/* Dùng chung btn */
+.btn {
+  color: #fff;
+  text-align: center;
 
+  font-size: 1.6rem;
 
+  font-weight: 600;
+  /* line-height: 28px; 175% */
 
+  /* Phần nền */
+  border-radius: 999px;
+  background: #171100;
+  padding: 7px 30px;
+}
+.btn:hover {
+  opacity: 0.8;
+}
 
 /* ================Header=============== */
 
-.header.fixed{
-    position: sticky;
-    top: -5px;
+.header.fixed {
+  position: sticky;
+  top: -5px;
+  z-index: 1;
 }
 
-.header{
-    background-color: cyan;
-}
-.header .body{
-    display: flex;
-    align-items: center;
-}
-.nav{
-    margin-left: auto;
+.header {
+  background-color: #fff;
 }
 
-.nav ul{
-    display: flex;
+.header .body {
+  display: flex;
+  align-items: center;
 }
 
-.nav a{
-    position: relative;
-    color: #5F5B53;
-    font-size: 1.6rem;
-    padding: 8px 22px;
- /* margin: 10px; */
- /* background: yellow; */
+.nav {
+  margin-left: auto;
 }
-.nav a:hover, nav li.active a{
-    color: #171100;
-    
-    /* font-weight: 600; */
-    text-shadow: 1px 0  0 currentColor;
-    /* line-height: 28px; 175% */
 
+.nav ul {
+  display: flex;
 }
-nav li.active a::after{
-   position: absolute;
-   left: 22px;
-   bottom: 6px;
-   display: block;
-   content: "";
-   width: 12px;
-   height: 2px;
-   border-radius: 1px;
-   background-color: #171100;
+
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 22px;
+  /* margin: 10px; */
+  /* background: yellow; */
+}
+
+.nav a:hover,
+nav li.active a {
+  color: #171100;
+
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+  /* line-height: 28px; 175% */
+}
+
+/* Phần thanh dưới home */
+.nav li.active a::after {
+  position: absolute;
+  left: 22px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #171100;
+}
+
+/* Phần Button */
+.header .action {
+  margin-left: 90px;
+}
+
+/* ===================Phần Hero============= */
+.img {
+  border-radius: 50px;
+
+  padding-top: 20px;
+}
+.hero {
+  background-color: #fffcf4;
+  padding: 56px 0 65px;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* =============Hero Left============== */
+
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+
+.hero .content-block {
+  width: 52%;
+}
+
+/* Thẻ bên ngoài cái ảnh */
+.hero .hero-summary {
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  width: 270px;
+}
+.hero-summary .item {
+  display: flex;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.hero-summary .icon2 {
+  background-color: #fcefff;
+}
+.hero-summary .icon3 {
+  background-color: #ebeaff;
+}
+
+.hero-summary .info {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.hero-summary .lable {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+/* ================Hero Right================ */
+
+.hero .content-block {
+  width: 52%;
+  padding-left: 170px;
+  padding-top: 60px;
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+
+.hero .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  margin-top: 22px;
+
+  line-height: 1.67;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero .hero-cta {
+  min-width: 180px;
+  background-color: var(--primary-color);
+  line-height: 50px;
+}
+
+.hero .watch-video {
+  border: none;
+  background: transparent;
+  display: flex;
+  margin-left: 28px;
+  align-items: center;
+  cursor: pointer;
+}
+.hero .watch-video .icon {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+.hero .watch-video span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  margin-left: 14px;
+}
+
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .starts {
+  margin-top: 8px;
+}
+
+.hero .starts strong {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+  margin-right: 15px;
+  /* background-color: yellow; */
+}
+
+.hero .starts strong:nth-child(2) {
+  margin-left: 28px;
+}
+
+/* =================Popular=============== */
+
+.popular {
+  /* display: flex; */
+  padding: 65px 0;
+  /* background-color: yellow; */
+  margin-top: 135px;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  width: 458px;
+  /* font-family: var(--font-heading); */
+  font-size: 1.8rem;
+  /* background-color: pink; */
+
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-top .controls {
+  display: flex;
+  gap: 18px;
+}
+
+/* nút di chuyển qua lại */
+.popular-top .controls-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  color: red;
+}
+.popular-top .controls-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Phần Course List */
+.popular .course-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 55px;
+}
+.popular .course-item {
+  border-radius: 12px;
+  background: #fff;
+  border-radius: 1px solid #e2dfda;
+}
+.popular .course-item:hover {
+  border-radius: 12px;
+  /* border: 1px solid transparent; */
+  background: #fff;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .thumd {
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+  height: 278px;
+  /* Ảnh không bị méo  */
+  object-fit: cover;
+}
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+  /* outline: none; */
+}
+
+.popular .course-item .rating,
+.popular .course-item .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular .course-item .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.popular .rating .value {
+  margin-left: 6px;
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.popular .course-item .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.popular .course-item .price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.popular .course-item .btn-book {
+  cursor: pointer;
+  border: none;
+}
+
+.popular .course-item .btn-book:hover {
+  background: var(--primary-color);
+}
+
+/* =============FeedBack============= */
+.FeedBack {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #2e2100;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedback-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.feedback-item .info .membername {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.feedback-item .content {
+  width: 66%;
+  /* background-color: yellow; */
+}
+
+.feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.feedback-item .dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 28px;
+  cursor: pointer;
+}
+
+.feedback-item .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #634700;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
+}
+.feedback-item .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
+}
+
+/* ==================Feature 1================= */
+
+.feature {
+  margin-top: 135px;
+  padding: 65px 0;
+  /* background-color: yellow; */
+}
+
+.feature .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature .images {
+  display: flex;
+  gap: 30px;
+}
+
+.feature .images img {
+  width: 270px;
+  height: 405px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.feature .lower {
+  margin-top: 34px;
+}
+
+.feature .content {
+  width: 41%;
+}
+
+.feature .desc {
+  color: #5f5b53;
+
+  font-size: 1.6rem;
+  margin-top: 16px;
+
+  line-height: 1.75; /* 175% */
+  margin-bottom: 32px;
+}
+
+.feature .content .cta-btn {
+  margin-left: 80px;
+  width: 137px;
+  height: 50px;
+  margin-top: 30px;
+  background: var(--primary-color);
+}
+
+/* ==================Feature 2================= */
+.feature-2nd .body {
+  flex-direction: row-reverse;
+}
+
+.feature-2nd {
+  margin-top: 70px;
+}
+.feature-2nd .content {
+  width: 49%;
+}
+
+.feature-2nd .images img {
+  width: 470px;
+  height: 440px;
+}
+
+/* ==========Blog============ */
+
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+
+  background: #fffcf4;
+}
+
+.blogs .blog-top {
+  text-align: center;
+}
+.blogs .head2 {
+  margin-top: 96px;
+}
+
+.blogs .blog-top .desc {
+  color: #696262;
+
+  font-size: 1.6rem;
+
+  width: 448px;
+  line-height: 1.75; /* 175% */
+  margin: 16px auto 0;
+}
+
+.blogs .blog-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+}
+.blogs .blog-list .item {
+  width: 33.33%;
+  border-radius: 16px;
+  background: #fff;
+}
+.blogs .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blogs .blog-list .item .thumb {
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .item .date {
+  position: relative;
+
+  padding-bottom: 12px;
+  color: #5f5b53;
+  display: flex;
+  align-items: center;
+  /* background-color: yellow; */
+
+  font-size: 1.4rem;
+
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.blogs .item .date::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin-right: 4px;
+}
+
+.blogs .item .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  /* dùng để xét độ rộng */
+  display: inline-block;
+  right: 160px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+.blogs .item .title {
+  margin-top: 12px;
+  color: #171100;
+
+  font-size: 1.6rem;
+
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+  margin-bottom: 12px;
+}
+
+.blogs .item .btn:hover {
+  background-color: var(--primary-color);
+}
+.blogs .dots {
+  display: flex;
+  margin-top: 38px;
+  justify-content: center;
+  gap: 6px;
+}
+
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+}
+
+.blogs .dot2 {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+
+/* ==================Footer============== */
+
+.footer{
+  background: #2E2100;
+  padding: 96px 135px 0;
+}
+
+.footer .row{
+  display: flex;
+  /* background-color: yellow; */
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column{
+  width: 21.6%;
+}
+
+.footer .row .column:first-child{
+  width: 35%; 
+  
+}
+
+.footer .desc{
+
    
+
+  margin-top: 18px;
+
+  /* Tự động co lại khi người dùng muốn thu nhỏ trang */
+  max-width: 267px;
+  color: #BFBCB2;
+
+font-size: 1.4rem;
+
+font-weight: 400;
+line-height: 1.86; /* 185.714% */
 }
 
-.fixed{
-    
+.footer .socials{
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+
 }
 
+.footer .column.title{
+  /* margin-left: 20px; */
+}
 
-.header .action{
-    margin-left: 90px;
+.footer .title{
+  margin-left: 80px;
+ padding-bottom: 14px;
+ padding-right: 48px;
+border-radius: 1px solid #59554b;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer .list {
+  margin-top: 8px;
+}
+
+.footer .list li a {
+display: inline-block;
+ /* margin-top: 12px; */
+ margin-bottom: 12px;
+margin-left: 80px;
+ color: #BFBCB2;
+
+
+font-size: 1.4rem;
+
+font-weight: 400;
+line-height: 1.86; /* 185.714% */
+
+}
+
+.footer .list strong{
+  color: #FFF;
+
+font-size: 1.4rem;
+
+font-weight: 600;
+line-height: 1.86; /* 185.714% */
+}
+
+.footer .copyright{
+  padding: 28px 0;
+  color: #807D74;
+text-align: center;
+
+font-size: 1.4rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.86; /* 185.714% */
 }
