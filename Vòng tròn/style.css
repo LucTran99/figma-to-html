@@ -1,0 +1,103 @@
+.content{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 90vh;
+    position: relative;
+    
+}
+.box{
+    
+
+    width: 200px;
+    height: 200px;
+    /* background: yellow; */
+    border: 5px solid #fff;
+    border-top: 5px solid red;
+    border-bottom: 5px solid green;
+    border-left: 5px solid yellow;
+    border-right: 5px solid blue;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.box1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    
+    border-radius: 50%;
+    border: 5px solid ;
+    border-top: 5px solid green;
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid blue;
+    border-right: 5px solid red;
+    animation:  spin 2s linear infinite;
+   
+}
+.box2{
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+ 
+    border-radius: 50%;
+    border: 5px solid ;
+    border-top: 5px solid green;
+    border-bottom: 5px solid red;
+    border-left: 5px solid blue;
+    border-right: 5px solid aqua;
+    animation:  spin 2s linear infinite;
+   
+
+}
+
+.box3{
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+   
+    border-radius: 50%;
+    border: 5px solid ;
+    border-top: 5px solid green;
+    border-bottom: 5px solid red;
+    border-left: 5px solid blue;
+    border-right: 5px solid aqua;
+    animation:  spin 2s linear infinite;
+   
+}
+.box4{
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+   
+    border-radius: 50%;
+    border: 5px solid ;
+    border-top: 5px solid red;
+    border-bottom: 5px solid yellow;
+    border-left: 5px solid blue;
+    border-right: 5px solid aqua;
+    animation:  spin 2s linear infinite;
+   
+}
+/* @keyframes spin: Bắt đầu khai báo một keyframes với tên là spin. */
+@keyframes spin{
+
+    
+    /* Tại thời điểm 100%, phần tử sẽ được xoay 360 độ, hoàn thành một vòng quay đầy đủ.
+     Điều này làm cho phần tử quay một vòng đầy đủ trong suốt thời gian của hiệu ứng. */
+    100%{transform: rotate(360deg);}
+}
